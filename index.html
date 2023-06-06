@@ -217,12 +217,33 @@ ul.task-list li input[type="checkbox"] {
 <li>로컬 저장소를 <code>github</code> 에 <code>push</code> 하는 경우 <strong>personal access token</strong>을 만들어서 password 에 입력해야 합니다. 자세한 poersonal access token 생성 과정은 <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">여기</a> 를 참조하세요.</li>
 </ul>
 <ol start="6" type="1">
-<li><code>Quarto</code> 의 <code>publish</code> 명령을 이용하여 사이트를 만든다.</li>
+<li><code>gh-pages</code> branch 를 local 저장소에 만든다.</li>
 </ol>
 <ul>
-<li>먼저 참고할 절차는 <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">여기</a></li>
-<li></li>
+<li>먼저 해야할 일
+<ul>
+<li><code>embed-resources: false</code> 로 지정해야함</li>
+<li><code>main</code> branch 에서 모든 것을 commit 한다.</li>
+<li>build 의 결과를 저장하는 폴더를 <code>.gitignore</code> 에 추가</li>
 </ul>
+<pre><code>/.quarto/
+/_site/</code></pre></li>
+<li>먼저 참고할 절차는 아래와 같이 Source Branch 인 <code>gh-pages</code> branch 를 만든다. <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">여기</a></li>
+</ul>
+<pre><code>git checkout --orphan gh-pages
+git reset --hard # make sure you've committed changes before running this!
+git commit --allow-empty -m "Initialising gh-pages branch"
+git push origin gh-pages</code></pre>
+<ol start="7" type="1">
+<li><code>Quarto</code> 의 <code>publish</code> 명령을 이용하여 사이트를 만든다 (command line 에서)</li>
+</ol>
+<ul>
+<li>주의: <code>-quarto.yaml</code> 에 있는 모든 format 을 publish 하기 때문에 모든 format 이 오류없이 실행되게 하거나 html 만 실행하도록 만든다.</li>
+</ul>
+<pre><code>quarto publish gh-pages</code></pre>
+<ol start="8" type="1">
+<li>이후에는 변경된 화일을 commit 하고 publish 하면 됨</li>
+</ol>
 
 
 </section>
