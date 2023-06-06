@@ -16,3 +16,8 @@ notes
 
 /.quarto/
 /_extensions/
+*.aux
+*.lof
+*.lot
+*.toc
+*.tex

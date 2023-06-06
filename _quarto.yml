@@ -22,7 +22,7 @@ format:
     language: custom.yml
     code-fold: true
     code-overflow: wrap
-    embed-resources: true
+    embed-resources: false
     include-in-header:
       - text: |
           <script type="text/javascript">
@@ -43,33 +43,33 @@ format:
           </script>
 #    include-before-body:
 #      - latex/preamble-mathjax.tex
-  bookup-html:
-    toc: true
-    toc-depth: 2
-    language: custom.yml
-    code-fold: true
-    code-overflow: wrap
-    embed-resources: true
-    include-in-header:
-      - latex/preamble-mathjax.tex
-
-  pdf:
-    documentclass: scrbook
-    papersize: A4
-    lang: kr
-    fontsize: 10pt
-    lof: true
-    lot: true
-    code-overflow: wrap
-    language: custom.yml
-    latex-auto-install: true
-    latex-tinytex: true
-    pdf-engine: xelatex
-    include-in-header: latex/preamble.tex
-
-  docx:
-    reference-doc: report-01.docx
-    include-in-header:
-      - latex/preamble-mathjax.tex
+  # bookup-html:
+  #   toc: true
+  #   toc-depth: 2
+  #   language: custom.yml
+  #   code-fold: true
+  #   code-overflow: wrap
+  #   embed-resources: true
+  #   include-in-header:
+  #     - latex/preamble-mathjax.tex
+  # 
+  # pdf:
+  #   documentclass: scrbook
+  #   papersize: A4
+  #   lang: kr
+  #   fontsize: 10pt
+  #   lof: true
+  #   lot: true
+  #   code-overflow: wrap
+  #   language: custom.yml
+  #   latex-auto-install: true
+  #   latex-tinytex: true
+  #   pdf-engine: xelatex
+  #   include-in-header: latex/preamble.tex
+  # 
+  # docx:
+  #   reference-doc: report-01.docx
+  #   include-in-header:
+  #     - latex/preamble-mathjax.tex
 
 
