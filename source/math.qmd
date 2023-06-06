@@ -1,0 +1,50 @@
+# 수학 기호 {#math}
+
+## 개요 
+
+## 한글 수식
+
+
+```
+부부_{ij}^2 = \int 엄마_{ij}^2 + 아빠_{ij}^2 
+```
+
+$$
+부부_{ij}^2 = \int 엄마_{ij}^2 + 아빠_{ij}^2 
+$$
+
+
+## HTML
+
+`mathjax` 에서 매크로 이용은 [사이트](https://docs.mathjax.org/en/latest/input/tex/extensions/configmacros.html#tex-configmacros-options) 참조
+
+### 새로운 명령어 
+
+```
+include-in-header:
+      - text: |
+          <script type="text/javascript">
+           window.MathJax = {
+            tex: {
+              macros: {
+              RR: '{\\bf R}',                    // a simple string replacement
+              hatmat:'{\\pmb X ({\\pmb X}^t {\\pmb X} )^{-1} {\\pmb X}^t}',
+              bold: ['\\boldsymbol{#1}',1] ,     // this macro has one parameter
+              pardiff: ['\\frac{\\partial#2}{\\partial#1}', 2, 'x'], // this macro has an optional parameter that defaults to 'x'
+              pardifftwo: ['\\frac{\\partial#1}{\\partial#2}', 2]
+            }
+           }
+          };
+          </script>
+```
+
+
+$$ \pmb X + {\pmb \Sigma} + \Sigma =  \RR =\pardiff{f} = \pardifftwo{f}{\theta} = \pardiff[\theta]{f} = \pmb \theta = \hatmat = \pmb \theta $$
+
+```
+$$ \pmb X + {\pmb \Sigma} + \Sigma =  \RR =\pardiff{f} = \pardifftwo{f}{\theta} = \pardiff[\theta]{f} = \pmb \theta = \hatmat = \pmb \theta $$
+```
+
+$$ \begin{braced} \frac{x}{y} \end{braced} +  \frac{x}{y} $$
+
+## PDF

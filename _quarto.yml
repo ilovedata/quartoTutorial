@@ -1,0 +1,75 @@
+project:
+  type: book
+
+book:
+  title: "Quarto를 사용한 한글책 제작의 기초"
+  author: "서울시립대학교 통계학과 이용희"
+  date: "today"
+  chapters:
+    - index.qmd
+    - source/intro.qmd
+    - source/layout.qmd
+    - source/math.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    language: custom.yml
+    code-fold: true
+    code-overflow: wrap
+    embed-resources: true
+    include-in-header:
+      - text: |
+          <script type="text/javascript">
+           window.MathJax = {
+            tex: {
+              macros: {
+              RR: '{\\bf R}',                    // a simple string replacement
+              hatmat:'{\\pmb X ({\\pmb X}^t {\\pmb X} )^{-1} {\\pmb X}^t}',
+              bold: ['\\boldsymbol{#1}',1] ,     // this macro has one parameter
+              pardiff: ['\\frac{\\partial#2}{\\partial#1}', 2, 'x'], // this macro has an optional parameter that defaults to 'x'
+              pardifftwo: ['\\frac{\\partial#1}{\\partial#2}', 2]
+            },
+            environments: {
+            braced: ["\\left\\{", "\\right\\}"]
+            }
+           }
+          };
+          </script>
+#    include-before-body:
+#      - latex/preamble-mathjax.tex
+  bookup-html:
+    toc: true
+    toc-depth: 2
+    language: custom.yml
+    code-fold: true
+    code-overflow: wrap
+    embed-resources: true
+    include-in-header:
+      - latex/preamble-mathjax.tex
+
+  pdf:
+    documentclass: scrbook
+    papersize: A4
+    lang: kr
+    fontsize: 10pt
+    lof: true
+    lot: true
+    code-overflow: wrap
+    language: custom.yml
+    latex-auto-install: true
+    latex-tinytex: true
+    pdf-engine: xelatex
+    include-in-header: latex/preamble.tex
+
+  docx:
+    reference-doc: report-01.docx
+    include-in-header:
+      - latex/preamble-mathjax.tex
+
+
