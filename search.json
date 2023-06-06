@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto를 사용한 한글책 제작의 기초",
+    "section": "",
+    "text": "서문\n이 책은 Quarto 를 이용하여 한글책을 만드는 방법을 설명합니다."
+  },
+  {
+    "objectID": "index.html#제작-절차",
+    "href": "index.html#제작-절차",
+    "title": "Quarto를 사용한 한글책 제작의 기초",
+    "section": "제작 절차",
+    "text": "제작 절차\n\n먼저 Quarto 를 설치한다.\n\n\n설치는 Quarto 시작페이지를 참고하자.\n\n\nRstudio 또는 Vscode 를 이용하여 Quarto book 프로젝트를 생성한다.\naaa\naaa\ngit 환경을 구성하고 github 의 원격저장소에 올린다\n\n\n자세한 방법은 여기를 참조하자. 통상적으로 github 에 먼저 저장소를 만들고 clone 하는 것이 정상적 절차지만 bookdown 프로젝트를 초기화하기 위하여 이 방법을 사용한다.)\n로컬 저장소를 github 에 push 하는 경우 personal access token을 만들어서 password 에 입력해야 합니다. 자세한 poersonal access token 생성 과정은 여기 를 참조하세요.\n\n\nQuarto 의 publish 명령을 이용하여 사이트를 만든다.\n\n\n먼저 참고할 절차는 여기"
+  },
+  {
+    "objectID": "source/intro.html",
+    "href": "source/intro.html",
+    "title": "1  개요",
+    "section": "",
+    "text": "Quarto는 출판물을 생성하기 위한 오픈 소스 도구이며, Markdown 기반으로 작성된 문서를 PDF, MS WORD 화일, 웹사이트 등 다양한 형식으로 변환할 수 있습니다.\nQuarto는 다양한 프로그래밍 언어(R, python, julia 등)를 사용하여 작성된 문서를 처리하는 기능과 코드의 실행 및 결과 통합을 지원하여 데이터 분석 및 보고서 작성에 특히 유용합니다."
+  },
+  {
+    "objectID": "source/layout.html#개요",
+    "href": "source/layout.html#개요",
+    "title": "2  책의 구성요소",
+    "section": "2.1 개요",
+    "text": "2.1 개요"
+  },
+  {
+    "objectID": "source/layout.html#html",
+    "href": "source/layout.html#html",
+    "title": "2  책의 구성요소",
+    "section": "2.2 HTML",
+    "text": "2.2 HTML"
+  },
+  {
+    "objectID": "source/layout.html#pdf",
+    "href": "source/layout.html#pdf",
+    "title": "2  책의 구성요소",
+    "section": "2.3 PDF",
+    "text": "2.3 PDF"
+  },
+  {
+    "objectID": "source/layout.html#ms-word",
+    "href": "source/layout.html#ms-word",
+    "title": "2  책의 구성요소",
+    "section": "2.4 MS-WORD",
+    "text": "2.4 MS-WORD"
+  },
+  {
+    "objectID": "source/math.html#개요",
+    "href": "source/math.html#개요",
+    "title": "3  수학 기호",
+    "section": "3.1 개요",
+    "text": "3.1 개요"
+  },
+  {
+    "objectID": "source/math.html#한글-수식",
+    "href": "source/math.html#한글-수식",
+    "title": "3  수학 기호",
+    "section": "3.2 한글 수식",
+    "text": "3.2 한글 수식\n부부_{ij}^2 = \\int 엄마_{ij}^2 + 아빠_{ij}^2 \n\\[\n부부_{ij}^2 = \\int 엄마_{ij}^2 + 아빠_{ij}^2\n\\]"
+  },
+  {
+    "objectID": "source/math.html#html",
+    "href": "source/math.html#html",
+    "title": "3  수학 기호",
+    "section": "3.3 HTML",
+    "text": "3.3 HTML\nmathjax 에서 매크로 이용은 사이트 참조\n\n3.3.1 새로운 명령어\ninclude-in-header:\n      - text: |\n          &lt;script type=\"text/javascript\"&gt;\n           window.MathJax = {\n            tex: {\n              macros: {\n              RR: '{\\\\bf R}',                    // a simple string replacement\n              hatmat:'{\\\\pmb X ({\\\\pmb X}^t {\\\\pmb X} )^{-1} {\\\\pmb X}^t}',\n              bold: ['\\\\boldsymbol{#1}',1] ,     // this macro has one parameter\n              pardiff: ['\\\\frac{\\\\partial#2}{\\\\partial#1}', 2, 'x'], // this macro has an optional parameter that defaults to 'x'\n              pardifftwo: ['\\\\frac{\\\\partial#1}{\\\\partial#2}', 2]\n            }\n           }\n          };\n          &lt;/script&gt;\n\\[ \\pmb X + {\\pmb \\Sigma} + \\Sigma =  \\RR =\\pardiff{f} = \\pardifftwo{f}{\\theta} = \\pardiff[\\theta]{f} = \\pmb \\theta = \\hatmat = \\pmb \\theta \\]\n$$ \\pmb X + {\\pmb \\Sigma} + \\Sigma =  \\RR =\\pardiff{f} = \\pardifftwo{f}{\\theta} = \\pardiff[\\theta]{f} = \\pmb \\theta = \\hatmat = \\pmb \\theta $$\n\\[ \\begin{braced} \\frac{x}{y} \\end{braced} +  \\frac{x}{y} \\]"
+  },
+  {
+    "objectID": "source/math.html#pdf",
+    "href": "source/math.html#pdf",
+    "title": "3  수학 기호",
+    "section": "3.4 PDF",
+    "text": "3.4 PDF"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "\\[ 1+ 1 \\]"
+  }
+]
