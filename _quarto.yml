@@ -7,9 +7,9 @@ book:
   date: "today"
   chapters:
     - index.qmd
-    - source/intro.qmd
     - source/layout.qmd
     - source/math.qmd
+    - source/publish.qmd
     - references.qmd
 
 bibliography: references.bib
