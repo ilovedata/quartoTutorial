@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="서울시립대학교 통계학과 이용희">
-<meta name="dcterms.date" content="2023-08-31">
+<meta name="dcterms.date" content="2023-09-27">
 
 <title>Quarto를 사용한 한글책 제작의 기초</title>
 <style>
@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./source/intro.html" rel="next">
+<link href="./source/layout.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -124,20 +124,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./source/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">개요</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./source/layout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">책의 구성요소</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">책의 구성요소</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./source/math.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">수학 기호</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">수학 기호</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./source/publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quarto 의 출판 절차</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#서문" id="toc-서문" class="nav-link active" data-scroll-target="#서문">서문</a>
   <ul class="collapse">
-  <li><a href="#제작-절차" id="toc-제작-절차" class="nav-link" data-scroll-target="#제작-절차">제작 절차</a></li>
+  <li><a href="#개요" id="toc-개요" class="nav-link" data-scroll-target="#개요">개요</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -185,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 31, 2023</p>
+      <p class="date">September 27, 2023</p>
     </div>
   </div>
   
@@ -197,55 +197,11 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="서문" class="level1 unnumbered">
 <h1 class="unnumbered">서문</h1>
-<p>이 책은 <a href="https://quarto.org/"><code>Quarto</code></a> 를 이용하여 한글책을 만드는 방법을 설명합니다.</p>
-<section id="제작-절차" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="제작-절차">제작 절차</h2>
-<ol type="1">
-<li>먼저 <code>Quarto</code> 를 설치한다.</li>
-</ol>
-<ul>
-<li>설치는 <a href="https://quarto.org/docs/get-started/"><code>Quarto</code> 시작페이지</a>를 참고하자.</li>
-</ul>
-<ol start="2" type="1">
-<li><p><code>Rstudio</code> 또는 <code>Vscode</code> 를 이용하여 <code>Quarto</code> book 프로젝트를 생성한다.</p></li>
-<li><p><code>git</code> 환경을 구성하고 <code>github</code> 의 원격저장소에 올린다</p></li>
-</ol>
-<ul>
-<li>자세한 방법은 <a href="https://docs.github.com/ko/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github">여기</a>를 참조하자. 통상적으로 <code>github</code> 에 먼저 저장소를 만들고 <code>clone</code> 하는 것이 정상적 절차지만 <code>bookdown</code> 프로젝트를 초기화하기 위하여 이 방법을 사용한다.)</li>
-<li>로컬 저장소를 <code>github</code> 에 <code>push</code> 하는 경우 <strong>personal access token</strong>을 만들어서 password 에 입력해야 합니다. 자세한 poersonal access token 생성 과정은 <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">여기</a> 를 참조하세요.</li>
-</ul>
-<ol start="4" type="1">
-<li><code>gh-pages</code> branch 를 local 저장소에 만든다.</li>
-</ol>
-<ul>
-<li>먼저 해야할 일
-<ul>
-<li><code>embed-resources: false</code> 로 지정해야함</li>
-<li><code>main</code> branch 에서 모든 것을 commit 한다.</li>
-<li>build 의 결과를 저장하는 폴더를 <code>.gitignore</code> 에 추가</li>
-</ul>
-<pre><code>/.quarto/
-/_site/</code></pre></li>
-<li>먼저 참고할 절차는 아래와 같이 Source Branch 인 <code>gh-pages</code> branch 를 만든다. <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">여기</a></li>
-</ul>
-<pre><code>git checkout --orphan gh-pages
-git reset --hard # make sure you've committed changes before running this!
-git commit --allow-empty -m "Initialising gh-pages branch"
-git push origin gh-pages</code></pre>
-<ol start="5" type="1">
-<li>다시 <code>main</code> 저장소로 돌아간다.</li>
-</ol>
-<pre><code>git checkout main.</code></pre>
-<ol start="6" type="1">
-<li><code>Quarto</code> 의 <code>publish</code> 명령을 이용하여 사이트를 만든다 (command line 에서)</li>
-</ol>
-<ul>
-<li>주의: <code>-quarto.yaml</code> 에 있는 모든 format 을 publish 하기 때문에 모든 format 이 오류없이 실행되게 하거나 html 만 실행하도록 만든다.</li>
-</ul>
-<pre><code>quarto publish gh-pages</code></pre>
-<ol start="6" type="1">
-<li>이후에는 변경된 화일을 commit 하고 publish 하면 됨</li>
-</ol>
+<p>이 책은 <a href="https://quarto.org/"><code>Quarto</code></a> 를 이용하여 한글책을 만들고 출판하는 간략한 방법과 팀을 설명합니다.</p>
+<section id="개요" class="level2">
+<h2 class="anchored" data-anchor-id="개요">개요</h2>
+<p>Quarto는 출판물을 생성하기 위한 오픈 소스 도구이며, Markdown 기반으로 작성된 문서를 PDF, MS WORD 화일, 웹사이트 등 다양한 형식으로 변환할 수 있습니다.</p>
+<p>Quarto는 다양한 프로그래밍 언어(<code>R</code>, <code>python</code>, <code>julia</code> 등)를 사용하여 작성된 문서를 처리하는 기능과 코드의 실행 및 결과 통합을 지원하여 데이터 분석 및 보고서 작성에 특히 유용합니다.</p>
 
 
 </section>
@@ -489,8 +445,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./source/intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">개요</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./source/layout.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">책의 구성요소</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
