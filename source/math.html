@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
@@ -49,16 +49,16 @@ ul.task-list li input[type="checkbox"] {
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 <script type="text/javascript">
@@ -89,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../source/math.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">수학 기호</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -154,13 +154,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul class="collapse">
   <li><a href="#개요" id="toc-개요" class="nav-link active" data-scroll-target="#개요"><span class="header-section-number">2.1</span> 개요</a></li>
   <li><a href="#한글-수식" id="toc-한글-수식" class="nav-link" data-scroll-target="#한글-수식"><span class="header-section-number">2.2</span> 한글 수식</a></li>
-  <li><a href="#html" id="toc-html" class="nav-link" data-scroll-target="#html"><span class="header-section-number">2.3</span> HTML</a></li>
-  <li><a href="#pdf" id="toc-pdf" class="nav-link" data-scroll-target="#pdf"><span class="header-section-number">2.4</span> PDF</a></li>
+  <li><a href="#수식" id="toc-수식" class="nav-link" data-scroll-target="#수식"><span class="header-section-number">2.3</span> 수식</a></li>
+  <li><a href="#theorem" id="toc-theorem" class="nav-link" data-scroll-target="#theorem"><span class="header-section-number">2.4</span> Theorem</a></li>
+  <li><a href="#html" id="toc-html" class="nav-link" data-scroll-target="#html"><span class="header-section-number">2.5</span> HTML</a></li>
+  <li><a href="#pdf" id="toc-pdf" class="nav-link" data-scroll-target="#pdf"><span class="header-section-number">2.6</span> PDF</a></li>
   </ul>
 </nav>
     </div>
@@ -189,16 +191,93 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="한글-수식" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="한글-수식"><span class="header-section-number">2.2</span> 한글 수식</h2>
-<pre><code>부부_{ij}^2 = \int 엄마_{ij}^2 + 아빠_{ij}^2 </code></pre>
+<pre><code>$$ 부부_{ij}^2 = \int 엄마_{ij}^2 + 아빠_{ij}^2 $$</code></pre>
 <p><span class="math display">\[
 부부_{ij}^2 = \int 엄마_{ij}^2 + 아빠_{ij}^2
 \]</span></p>
 </section>
-<section id="html" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="html"><span class="header-section-number">2.3</span> HTML</h2>
+<section id="수식" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="수식"><span class="header-section-number">2.3</span> 수식</h2>
+<section id="일차연립방정식" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="일차연립방정식"><span class="header-section-number">2.3.1</span> 일차연립방정식</h3>
+<p>다음과 같이 <span class="math inline">\(n\)</span> 개의 변수 <span class="math inline">\(x_1,x_2,\dots,x_n\)</span> 에 대한 <span class="math inline">\(m\)</span> 개의 방정식이 있다면 이를 일차연립방정식(a system of linear equations) 이라고 한다.</p>
+<p><span id="eq-syseq"><span class="math display">\[
+\begin{aligned}
+a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n &amp; = y_1 \\
+a_{21} x_1 + a_{22} x_2 + \dots + a_{2n} x_n &amp; = y_2 \\
+... &amp; \\
+a_{m1} x_1 + a_{m2} x_2 + \dots + a_{mn} x_n &amp; = y_m
+\end{aligned}
+\tag{2.1}\]</span></span></p>
+<p>위에서 일차연립방정식 <a href="#eq-syseq">식&nbsp;<span>2.1</span></a> 에 나타나는 변수 <span class="math inline">\(x_1,x_2,\dots,x_n\)</span> 와 계수 <span class="math inline">\(a_{ij}\)</span>, <span class="math inline">\(y_i\)</span> 으로 좀더 보기 좋고 효율적으로 표현하기 위하여 행렬 <span class="math inline">\(\pmb A\)</span>과 벡터 <span class="math inline">\(\pmb x\)</span>, <span class="math inline">\(\pmb y\)</span>의 다음과 같이 표기하고</p>
+<p><span class="math display">\[
+\pmb A =
+\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{bmatrix},
+\quad
+\pmb x =
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+,\quad
+\pmb y =
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_m
+\end{bmatrix}
+\]</span></p>
+<p>일차연립방정식 <a href="#eq-syseq">식&nbsp;<span>2.1</span></a> 을 다음과 같이 표현할 수 있다.</p>
+<p><span id="eq-syseq2"><span class="math display">\[
+{\pmb A} {\pmb x} = {\pmb y}, \text{ 즉} \quad
+\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_m
+\end{bmatrix}
+\tag{2.2}\]</span></span></p>
+<p>식 <a href="#eq-syseq2">식&nbsp;<span>2.2</span></a> 은 <span class="math inline">\(y_i\)</span>의 값이 변수 <span class="math inline">\(x_1,x_2,\dots,x_n\)</span> 와 계수 <span class="math inline">\(a_{i1}, a_{i2}, \dots a_{in}\)</span> 를 다음과 같은 식으로 계산한다는 의미이다. 즉 일차연립방정식 <a href="#eq-syseq">식&nbsp;<span>2.1</span></a> 을 행렬과 벡터로 표현한 것이다.</p>
+<p><span class="math display">\[ \sum_{i=j}^n a_{ij} x_j = y_i, \quad i=1,2,\dots,m \]</span></p>
+</section>
+</section>
+<section id="theorem" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="theorem"><span class="header-section-number">2.4</span> Theorem</h2>
+<p>사용법은 <a href="https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs">Quarto 사용설명서</a> 를 참조하자.</p>
+<div id="thm-line" class="theorem">
+<p><span class="theorem-title"><strong>정리 2.1 (Line) </strong></span>The equation of any straight line, called a linear equation, can be written as:</p>
+<p><span class="math display">\[
+y = mx + b
+\]</span></p>
+</div>
+<p>See <a href="#thm-line">정리&nbsp;<span>2.1</span></a></p>
+</section>
+<section id="html" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="html"><span class="header-section-number">2.5</span> HTML</h2>
 <p><code>mathjax</code> 에서 매크로 이용은 <a href="https://docs.mathjax.org/en/latest/input/tex/extensions/configmacros.html#tex-configmacros-options">사이트</a> 참조</p>
-<section id="새로운-명령어" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="새로운-명령어"><span class="header-section-number">2.3.1</span> 새로운 명령어</h3>
+<section id="새로운-명령어" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="새로운-명령어"><span class="header-section-number">2.5.1</span> 새로운 명령어</h3>
 <pre><code>include-in-header:
       - text: |
           &lt;script type="text/javascript"&gt;
@@ -219,8 +298,8 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[ \begin{braced} \frac{x}{y} \end{braced} +  \frac{x}{y} \]</span></p>
 </section>
 </section>
-<section id="pdf" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="pdf"><span class="header-section-number">2.4</span> PDF</h2>
+<section id="pdf" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="pdf"><span class="header-section-number">2.6</span> PDF</h2>
 
 
 </section>
@@ -280,12 +359,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "복사완료!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "복사완료!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

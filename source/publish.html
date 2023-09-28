@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
@@ -83,16 +83,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 <script type="text/javascript">
@@ -121,11 +121,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../source/publish.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quarto 의 출판 절차</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -144,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="검색"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul class="collapse">
   <li><a href="#사전-작업" id="toc-사전-작업" class="nav-link active" data-scroll-target="#사전-작업"><span class="header-section-number">3.1</span> 사전 작업</a></li>
@@ -230,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+힌트
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -247,7 +247,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+힌트
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -260,18 +260,18 @@ Tip
 <li><p>터미널을 열고 프로젝트 화일들이 있는 폴더로 이동한다.</p></li>
 <li><p>다음과 같은 명령으로 <code>git</code> 저장소를 초기화한다.</p>
 <p>만약 Git 버전 2.28.0 또는 그 이상을 사용한다면:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git init -b main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git init -b main</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>만약 Git 버전 2.27.1 또는 그 이하를 사용한다면:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git init &amp;&amp; git symbolic-ref HEAD refs/heads/main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git init &amp;&amp; git symbolic-ref HEAD refs/heads/main</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>다음에 다음과 같은 명령으로 저장소의 변경 내용을 추가하고 커밋한다.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git add .</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>git commit -m "First commit"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>git commit -m "First commit"</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>이제 Github 계정에서 원격 저장소를 만든다. 만드는 방법은 <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">Github 안내서</a>를 참조하여 만들면 된다. 이 경우 <code>README</code> 화일은 만들지 않으며 로컹 저장소에서 만들어서 나중에 원격저장소에 올린다.</p></li>
 <li><p>Github에서 원격 저장소를 만든 후에 저장소의 주소를 복사한다.</p></li>
 <li><p>터미날로 돌아가서 로컬 저장소가 있는 폴더에서 다음 명령을 입력한다.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git remote add origin &lt;REMOTE_URL&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git remote add origin &lt;REMOTE_URL&gt;</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>프로젝트 폴더에서 커밋한 화일을 github의 원격 저장소에 push 하자.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git push -u origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git push -u origin main</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 <p>이제 github의 원격 저장소에 가면 커밋한 화일들이 원격 저장소에 올려진 것을 확인할 수 있다.</p>
 <ul>
@@ -284,16 +284,16 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+힌트
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Git 로 화일을 관리하는 도중에 관리할 필요가 없는 새로운 화일이 생겨서 <code>.gitignore</code> 파일에 넣어 주고 적용할 경우가 생긴다.</p>
 <p>먼저 <code>.gitignore</code> 파일에 관리할 필요가 없는 화일들을 추가해 주고 다음 명령어를 실행한다.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>git rm -r --cached .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>git rm -r --cached .</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>위의 명령이 실행되면 다시 화일들의 변경을 추가하고 커밋한다.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>git add .</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>git commit -m "apply change in .gitignore"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>git commit -m "apply change in .gitignore"</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -314,15 +314,17 @@ Tip
 <ol type="1">
 <li><p>먼저 해야할 일</p>
 <ul>
-<li><code>_quarto.yml</code> 의 <code>format: html:</code> 옵션에서 <code>embed-resources: false</code> 로 지정하는 것이 좋다.</li>
-<li><code>main</code> branch 에서 모든 것을 commit 한다.</li>
-<li>build 의 결과를 저장하는 폴더를 <code>.gitignore</code> 에 추가 <code>/.quarto/     /_site/</code></li>
+<li><p><code>_quarto.yml</code> 의 <code>format: html:</code> 옵션에서 <code>embed-resources: false</code> 로 지정하는 것이 좋다.</p></li>
+<li><p><code>main</code> branch 에서 모든 것을 commit 한다.</p></li>
+<li><p>build 의 결과를 저장하는 폴더를 <code>.gitignore</code> 에 추가</p>
+<pre><code>/.quarto/
+/_site/</code></pre></li>
 </ul></li>
 <li><p><code>gh-pages</code> branch 를 로컬 저장소에 만든다. 다음과 같은 명령어로 <code>gh-pages</code> branch 를 만든다.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>git checkout --orphan gh-pages</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>git reset --hard # make sure you've committed changes before running this!</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>git commit --allow-empty -m "Initialising gh-pages branch"</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>git push origin gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>git checkout --orphan gh-pages</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>git reset --hard # make sure you've committed changes before running this!</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>git commit --allow-empty -m "Initialising gh-pages branch"</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>git push origin gh-pages</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Github 의 원격 저장소로 이동하여 <code>Settongs</code> -&gt; <code>Page</code> 메뉴로 이동하여 다은 그림과 같이 Source 는 Deloy from a branch, Branch 는 gh-page 와 /(root) 로 지정되어 있는지 확인한다.</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -335,7 +337,7 @@ Tip
 <li><p>다시 <code>main</code> 저장소로 돌아간다.</p>
 <pre><code>git checkout main</code></pre></li>
 <li><p><code>Quarto</code> 의 <code>publish</code> 명령을 이용하여 사이트를 만든다</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>quarto publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>quarto publish gh-pages</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>주의</strong> : <code>-quarto.yaml</code> 에 있는 모든 format 을 publish 하기 때문에 모든 format 이 오류없이 실행되게 하거나 html 만 실행하도록 만든다.</li>
 </ul></li>
@@ -414,12 +416,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "복사완료!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "복사완료!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
