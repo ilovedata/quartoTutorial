@@ -19,10 +19,17 @@ format:
     theme: cosmo
     toc: true
     toc-depth: 2
+    lang: ko
     language: custom.yml
     code-fold: true
     code-overflow: wrap
     embed-resources: false
+    crossref:
+      fig-prefix: 그림   # (default is "Figure")
+      tbl-prefix: 표    # (default is "Table")
+      eq-prefix: 식     # (default is "Equation")
+      ref-hyperlink: true # (default is true)
+      thm-prefix: 정리
     include-in-header:
       - text: |
           <script type="text/javascript">
@@ -53,19 +60,24 @@ format:
   #   include-in-header:
   #     - latex/preamble-mathjax.tex
   # 
-  # pdf:
-  #   documentclass: scrbook
-  #   papersize: A4
-  #   lang: kr
-  #   fontsize: 10pt
-  #   lof: true
-  #   lot: true
-  #   code-overflow: wrap
-  #   language: custom.yml
-  #   latex-auto-install: true
-  #   latex-tinytex: true
-  #   pdf-engine: xelatex
-  #   include-in-header: latex/preamble.tex
+  pdf:
+    documentclass: scrbook
+    papersize: A4
+    lang: ko
+    fontsize: 10pt
+    lof: true
+    lot: true
+    code-overflow: wrap
+    language: custom.yml
+    latex-auto-install: true
+    latex-tinytex: true
+    pdf-engine: xelatex
+    crossref:
+      fig-prefix: 그림   # (default is "Figure")
+      tbl-prefix: 표    # (default is "Table")
+      eq-prefix: 식     # (default is "Equation")
+      ref-hyperlink: true # (default is true)
+    include-in-header: latex/preamble.tex
   # 
   # docx:
   #   reference-doc: report-01.docx
