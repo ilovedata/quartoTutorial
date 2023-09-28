@@ -116,6 +116,7 @@ Quarto 로 제작한 웹사이트나 책을 Github Page 에 웹사이트 형태�
    + `_quarto.yml` 의 `format: html:` 옵션에서 `embed-resources: false` 로 지정하는 것이 좋다.
    + `main` branch 에서 모든 것을 commit 한다.
    + build 의 결과를 저장하는 폴더를 `.gitignore` 에 추가
+
        ```         
        /.quarto/
        /_site/
